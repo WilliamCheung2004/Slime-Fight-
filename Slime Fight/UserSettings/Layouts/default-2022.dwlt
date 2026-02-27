@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: Project
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 321}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -45,10 +45,10 @@ MonoBehaviour:
     y: 30
     width: 1280
     height: 712.6667
-  m_MinSize: {x: 679, y: 492}
-  m_MaxSize: {x: 14002, y: 14042}
+  m_MinSize: {x: 503, y: 271}
+  m_MaxSize: {x: 16192, y: 12117}
   vertical: 0
-  controlID: 324
+  controlID: 96
   draggingID: 0
 --- !u!114 &3
 MonoBehaviour:
@@ -69,8 +69,8 @@ MonoBehaviour:
     y: 0
     width: 302
     height: 712.6667
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -151,7 +151,7 @@ MonoBehaviour:
     y: 0
     width: 1280
     height: 762.6667
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 321}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -178,7 +178,7 @@ MonoBehaviour:
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
-  m_LastLoadedLayoutName: Default
+  m_LastLoadedLayoutName: 
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -221,10 +221,10 @@ MonoBehaviour:
     y: 0
     width: 978
     height: 712.6667
-  m_MinSize: {x: 403, y: 492}
-  m_MaxSize: {x: 10001, y: 14042}
+  m_MinSize: {x: 403, y: 271}
+  m_MaxSize: {x: 8096, y: 12117}
   vertical: 1
-  controlID: 325
+  controlID: 48
   draggingID: 0
 --- !u!114 &10
 MonoBehaviour:
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 316
+  controlID: 39
   draggingID: 0
 --- !u!114 &11
 MonoBehaviour:
@@ -324,7 +324,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Game/Scripts
+    - Assets/Game/Scripts/Physics
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -332,17 +332,17 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Game/Scripts
+  - Assets/Game/Scripts/Physics
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\minim\OneDrive\Documents\GitHub\Synoptic\Ai\Slime-Fight-\Slime
     Fight
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: e2620000
-    m_LastClickedID: 25314
-    m_ExpandedIDs: ffffffff00000000dc620000de620000e0620000e2620000e4620000e6620000e8620000ea620000ec620000ee620000f0620000
+    scrollPos: {x: 0, y: 6.9999695}
+    m_SelectedIDs: 12630000
+    m_LastClickedID: 25362
+    m_ExpandedIDs: 00000000de620000e0620000e2620000e4620000e6620000e8620000ea620000ec620000ee620000f0620000f2620000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -370,7 +370,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000dc620000de620000e0620000e2620000e4620000e6620000e8620000ea620000ec620000ee620000f0620000f2620000
+    m_ExpandedIDs: 00000000de620000e0620000e2620000e4620000e6620000e8620000ea620000ec620000ee620000f0620000f2620000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -510,9 +510,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 96630000
+      m_SelectedIDs: a0240000
       m_LastClickedID: 0
-      m_ExpandedIDs: 42fbffff
+      m_ExpandedIDs: 2afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -855,7 +855,7 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: -0.68677074, y: -0.14349456, z: 0.53591174}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0}
+    m_Value: {x: -0.68677074, y: -0.14349456, z: 0.53591174}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -903,11 +903,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.12765585, y: -0.5841063, z: 0.0936636, w: 0.7960894}
     speed: 2
-    m_Value: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+    m_Value: {x: 0.12765537, y: -0.5841042, z: 0.09366326, w: 0.7960865}
   m_Size:
     m_Target: 1.1443231
     speed: 2
-    m_Value: 10
+    m_Value: 1.1443231
   m_Ortho:
     m_Target: 0
     speed: 2

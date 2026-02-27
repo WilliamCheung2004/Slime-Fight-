@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\minim\\OneDrive\\Documents\\GitHub\\Synoptic\\Ai\\Slime-Fight-\\Slime Fight\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0680D973-0C99-07EA-D147-A19C6FFA21B9}|Assembly-CSharp.csproj|c:\\users\\minim\\onedrive\\documents\\github\\synoptic\\ai\\slime-fight-\\slime fight\\assets\\game\\scripts\\physics\\softbody.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0680D973-0C99-07EA-D147-A19C6FFA21B9}|Assembly-CSharp.csproj|solutionrelative:assets\\game\\scripts\\physics\\softbody.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0680D973-0C99-07EA-D147-A19C6FFA21B9}|Assembly-CSharp.csproj|c:\\users\\minim\\onedrive\\documents\\github\\synoptic\\ai\\slime-fight-\\slime fight\\assets\\game\\scripts\\camera\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0680D973-0C99-07EA-D147-A19C6FFA21B9}|Assembly-CSharp.csproj|solutionrelative:assets\\game\\scripts\\camera\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0680D973-0C99-07EA-D147-A19C6FFA21B9}|Assembly-CSharp.csproj|c:\\users\\minim\\onedrive\\documents\\github\\synoptic\\ai\\slime-fight-\\slime fight\\assets\\home\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0680D973-0C99-07EA-D147-A19C6FFA21B9}|Assembly-CSharp.csproj|C:\\Users\\minim\\OneDrive\\Documents\\GitHub\\Synoptic\\Ai\\Slime-Fight-\\Slime Fight\\assets\\home\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0680D973-0C99-07EA-D147-A19C6FFA21B9}|Assembly-CSharp.csproj|solutionrelative:assets\\home\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -59,6 +63,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "SoftBody.cs",
+              "DocumentMoniker": "C:\\Users\\minim\\OneDrive\\Documents\\GitHub\\Synoptic\\Ai\\Slime-Fight-\\Slime Fight\\Assets\\Game\\Scripts\\Physics\\SoftBody.cs",
+              "RelativeDocumentMoniker": "Assets\\Game\\Scripts\\Physics\\SoftBody.cs",
+              "ToolTip": "C:\\Users\\minim\\OneDrive\\Documents\\GitHub\\Synoptic\\Ai\\Slime-Fight-\\Slime Fight\\Assets\\Game\\Scripts\\Physics\\SoftBody.cs",
+              "RelativeToolTip": "Assets\\Game\\Scripts\\Physics\\SoftBody.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAAADgAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T19:55:21.963Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "CameraFollow.cs",
               "DocumentMoniker": "C:\\Users\\minim\\OneDrive\\Documents\\GitHub\\Synoptic\\Ai\\Slime-Fight-\\Slime Fight\\Assets\\Game\\Scripts\\Camera\\CameraFollow.cs",
               "RelativeDocumentMoniker": "Assets\\Game\\Scripts\\Camera\\CameraFollow.cs",
@@ -71,7 +88,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\minim\\OneDrive\\Documents\\GitHub\\Synoptic\\Ai\\Slime-Fight-\\Slime Fight\\Assets\\Home\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Home\\GameManager.cs",
@@ -79,12 +96,11 @@
               "RelativeToolTip": "Assets\\Home\\GameManager.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAAwBEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-25T21:41:58.728Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-25T21:41:58.728Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Exit.cs",
               "DocumentMoniker": "C:\\Users\\minim\\OneDrive\\Documents\\UEA\\Year 3\\Game Dev\\Slime Fight\\Assets\\Home\\Exit.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\UEA\\Year 3\\Game Dev\\Slime Fight\\Assets\\Home\\Exit.cs",
@@ -96,7 +112,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "TMP_SDF.shader",
               "DocumentMoniker": "C:\\Users\\minim\\OneDrive\\Documents\\UEA\\Year 3\\Game Dev\\Slime Fight\\Assets\\TextMesh Pro\\Shaders\\TMP_SDF.shader",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\UEA\\Year 3\\Game Dev\\Slime Fight\\Assets\\TextMesh Pro\\Shaders\\TMP_SDF.shader",
@@ -107,7 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "TextStop.cs",
               "DocumentMoniker": "C:\\Users\\minim\\OneDrive\\Documents\\UEA\\Year 3\\Game Dev\\Slime Fight\\Assets\\Scripts\\Text\\TextStop.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\UEA\\Year 3\\Game Dev\\Slime Fight\\Assets\\Scripts\\Text\\TextStop.cs",
@@ -119,7 +135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "InputManager.cs",
               "DocumentMoniker": "C:\\Users\\minim\\OneDrive\\Documents\\UEA\\Year 3\\Game Dev\\Slime Fight\\Assets\\Scripts\\Player\\InputManager.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\UEA\\Year 3\\Game Dev\\Slime Fight\\Assets\\Scripts\\Player\\InputManager.cs",
@@ -131,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "PlayerMotor.cs",
               "DocumentMoniker": "C:\\Users\\minim\\OneDrive\\Documents\\UEA\\Projects\\Unity\\3D game\\Assets\\Scripts\\Player\\Player Control\\PlayerMotor.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\UEA\\Projects\\Unity\\3D game\\Assets\\Scripts\\Player\\Player Control\\PlayerMotor.cs",
@@ -143,7 +159,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "PlayerMotor.cs",
               "DocumentMoniker": "C:\\Users\\minim\\OneDrive\\Documents\\UEA\\Year 3\\Game Dev\\Slime Fight\\Assets\\Scripts\\Player\\PlayerMotor.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\UEA\\Year 3\\Game Dev\\Slime Fight\\Assets\\Scripts\\Player\\PlayerMotor.cs",
@@ -155,7 +171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Particle.cs",
               "DocumentMoniker": "C:\\Users\\minim\\OneDrive\\Documents\\UEA\\Year 3\\Game Dev\\Slime Fight\\Assets\\Scripts\\Physics\\Particle.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\UEA\\Year 3\\Game Dev\\Slime Fight\\Assets\\Scripts\\Physics\\Particle.cs",
@@ -167,7 +183,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "SoftBody.cs",
               "DocumentMoniker": "C:\\Users\\minim\\OneDrive\\Documents\\UEA\\Year 3\\Game Dev\\Slime Fight\\Assets\\Scripts\\Physics\\SoftBody.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\UEA\\Year 3\\Game Dev\\Slime Fight\\Assets\\Scripts\\Physics\\SoftBody.cs",
@@ -179,7 +195,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Test.cs",
               "DocumentMoniker": "C:\\Users\\minim\\OneDrive\\Documents\\UEA\\Year 3\\Game Dev\\Slime Fight\\Assets\\Scripts\\Camera\\Test.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\UEA\\Year 3\\Game Dev\\Slime Fight\\Assets\\Scripts\\Camera\\Test.cs",
@@ -191,7 +207,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "PlayerLook.cs",
               "DocumentMoniker": "C:\\Users\\minim\\OneDrive\\Documents\\UEA\\Year 3\\Game Dev\\Slime Fight\\Assets\\Scripts\\Camera\\PlayerLook.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\UEA\\Year 3\\Game Dev\\Slime Fight\\Assets\\Scripts\\Camera\\PlayerLook.cs",
@@ -203,7 +219,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "CameraFollow.cs",
               "DocumentMoniker": "C:\\Users\\minim\\OneDrive\\Documents\\UEA\\Year 3\\Game Dev\\Slime Fight\\Assets\\Scripts\\Camera\\CameraFollow.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\UEA\\Year 3\\Game Dev\\Slime Fight\\Assets\\Scripts\\Camera\\CameraFollow.cs",
@@ -215,7 +231,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "CameraSwitch.cs",
               "DocumentMoniker": "C:\\Users\\minim\\OneDrive\\Documents\\UEA\\Year 3\\Game Dev\\Slime Fight\\Assets\\Scripts\\Camera\\CameraSwitch.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\UEA\\Year 3\\Game Dev\\Slime Fight\\Assets\\Scripts\\Camera\\CameraSwitch.cs",
