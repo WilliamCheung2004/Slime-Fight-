@@ -49,6 +49,7 @@ public class Spawner : MonoBehaviour
     private bool waveTextVisible = false;
     private int currentWaveIndex = 0;
     private bool waveActive = false;
+    private int enemiesKilledThisWave = 0;
     [SerializeField] private int totalWaves = 3;
 
     [Header("Exit")]
@@ -56,6 +57,8 @@ public class Spawner : MonoBehaviour
     [SerializeField] private GameObject exitDialogue;
 
     public bool canShowEnemiesLeft = true;
+    public bool activatePortal = true;
+    public bool StartBoss = false;
 
     void Start()
     {
@@ -117,6 +120,11 @@ public class Spawner : MonoBehaviour
 
     void Update()
     {
+        if (currentWaveIndex >= waves.Count)
+        {
+            return;
+        }
+
         Wave wave = waves[currentWaveIndex];
 
         Debug.Log("Enemies alive: " + wave.spawnedEnemiesList.Count);
@@ -135,32 +143,29 @@ public class Spawner : MonoBehaviour
 
     private void StartWave()
     {
-        currentWaveIndex = 0;
+        //currentWaveIndex = 0;
         waveActive = true;
         waveText.text = "Wave (" + waves[currentWaveIndex].waveNumber + " / " + totalWaves + ")";
         ShowWaveText();
     }
     public void EnemysKilled()
     {
+        if (currentWaveIndex >= waves.Count) return;
         if (playerResource.GetCurrentHealth() < 0)
         {
             enemiesLeftText.text = "";
             return;
         }
 
-        Wave wave = waves[currentWaveIndex];
-
-        wave.spawnedEnemiesList.RemoveAll(e => e == null);
-
-        int remaining = wave.spawnedEnemiesList.Count;
+        enemiesKilledThisWave++;
+        int remaining = waves[currentWaveIndex].spawnCount - enemiesKilledThisWave;
 
         if (canShowEnemiesLeft)
         {
-            enemiesLeftText.text = "Enemies Left: " + remaining;
+            enemiesLeftText.text = "Enemies Left: " + Mathf.Max(0, remaining);
             enemiesLeftText.gameObject.SetActive(true);
         }
     }
-
 
     private void HandleWave(Wave wave)
     {
@@ -175,7 +180,7 @@ public class Spawner : MonoBehaviour
                 wave.spawnTimer = 0f;
             }
         }
-            wave.spawnedEnemiesList.RemoveAll(e => e == null);
+        wave.spawnedEnemiesList.RemoveAll(e => e == null);
 
         if (wave.spawnedEnemies == wave.spawnCount && wave.spawnedEnemiesList.Count == 0)
         {
@@ -183,11 +188,12 @@ public class Spawner : MonoBehaviour
 
             if (currentWaveIndex < waves.Count)
             {
+                enemiesKilledThisWave = 0;
+                enemiesLeftText.text = "";
                 Debug.Log($"Starting Wave {waves[currentWaveIndex].waveNumber}");
+                waveText.text = "Wave (" + waves[currentWaveIndex].waveNumber + " / " + totalWaves + ")";
                 waves[currentWaveIndex].spawnTimer = 0f;
                 waves[currentWaveIndex].spawnedEnemies = 0;
-                enemiesLeftText.text = "";
-                waveText.text = "Wave (" + waves[currentWaveIndex].waveNumber + " / " + totalWaves + ")";
                 ShowWaveText();
             }
             else
@@ -197,6 +203,7 @@ public class Spawner : MonoBehaviour
                 enemiesLeftText.text = "";
                 waveText.text = "Waves Completed!";
                 StartCoroutine(WaitSeconds(3f));
+                StartBoss = true;
             }
         }
     }
@@ -256,25 +263,33 @@ public class Spawner : MonoBehaviour
         waveText.gameObject.SetActive(true);
 
         yield return new WaitForSeconds(seconds);
+
+        if (currentWaveIndex >= waves.Count)
+            yield break;
+
         Wave wave = waves[currentWaveIndex];
-        enemiesLeftText.text = "Enemies Left: " + wave.spawnCount;
         canShowEnemiesLeft = true;
         waveTextVisible = false;
         enemiesLeftText.gameObject.SetActive(true);
         waveText.gameObject.SetActive(false);
-
+        enemiesLeftText.text = "Enemies Left: " + wave.spawnCount;
+        wave.spawnedEnemiesList.RemoveAll(e => e == null);
     }
 
 
     IEnumerator WaitSeconds(float seconds)
     {
         yield return new WaitForSeconds(seconds);
-        portal.SetActive(true);
+        waveText.text = ""; 
+        if (activatePortal)
+        {
+            portal.SetActive(true);
+        }
     }
 
-    IEnumerator turnOffRemain(float seconds)
-    {
-        yield return new WaitForSeconds(seconds);
-        enemiesLeftText.gameObject.SetActive(false);
+        IEnumerator turnOffRemain(float seconds)
+        {
+            yield return new WaitForSeconds(seconds);
+            enemiesLeftText.gameObject.SetActive(false);
+        }
     }
-}

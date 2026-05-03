@@ -2,15 +2,15 @@
   "Dialogue": [
     {
         "speaker": "You",
-        "text": "Finally this should be it."
+        "text": "*Sigh* It's finally done"
+    },
+    {
+        "speaker": "Skeleton King",
+        "text": "Past this final portal should be the end"
     },
     {
         "speaker": "You",
-        "text": "This portal should lead to the kingdom."
-    },
-    {
-        "speaker": "You",
-        "text": "Lets get going."
+        "text": "Let's finish this."
     }
   ]
 }

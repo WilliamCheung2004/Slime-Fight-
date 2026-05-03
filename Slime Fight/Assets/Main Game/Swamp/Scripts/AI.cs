@@ -194,8 +194,6 @@ public class AI : MonoBehaviour
         if (!playerResource){ Debug.Log("PlayerResource not found"); return; }
         if (!spawner) { Debug.Log("Spawner not found"); return; }
 
-        Debug.Log("Enemy Died, giving money: " + enemyHandler.GetMoneyDrop());
-
         spawner.EnemysKilled();
         dead = true;
         agent.enabled = false;
@@ -239,7 +237,6 @@ public class AI : MonoBehaviour
             yield return null;
         }
 
-        // Re-enable agent movement
         agent.CompleteOffMeshLink();
         agent.updatePosition = true;
     }

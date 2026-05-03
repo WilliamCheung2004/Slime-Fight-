@@ -43,7 +43,7 @@ public class Dialogue : MonoBehaviour
 
     void Start()
     {
-        PlayerPrefs.SetInt("DialogueStatus", 1); 
+        PlayerPrefs.SetInt("DialogueStatus", 0); 
 
         if (jsonFileName == "")
         {
@@ -101,6 +101,7 @@ public class Dialogue : MonoBehaviour
 
     public void StartDialogue()
     {
+        textFinished = false;
         PlayerPrefs.SetInt("DialogueStatus", 0);
         index = 0;
         StartCoroutine(TypeLine());
@@ -172,5 +173,12 @@ public class Dialogue : MonoBehaviour
         characterComponent.text = "";
         currentSpeaker = "None";
         gameObject.SetActive(false);
+        textFinished = true;
     }
+
+    private IEnumerator WaitEndDialogue(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        EndDialogue();
+    }   
 }
