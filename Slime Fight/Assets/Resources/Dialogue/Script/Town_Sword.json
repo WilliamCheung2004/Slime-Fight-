@@ -1,0 +1,50 @@
+{
+    "Dialogue": [
+        {
+            "speaker": "Eye Patch",
+            "text": "Ugh… supplies are running low in the village. Is there anything we can do?"
+        },
+        {
+            "speaker": "Nice Guy",
+            "text": "Hmm, I’ve heard there’s a kingdom nearby with plenty of wealth… but the journey looks rough."
+        },
+        {
+            "speaker": "Old Man",
+            "text": "Heh, who’d be foolish enough to risk their life going there?"
+        },
+        {
+            "speaker": "You",
+            "text": "I’ll go, it can't be that bad."
+        },
+        {
+            "speaker": "Nice Guy",
+            "text": "Wait—seriously?"
+        },
+        {
+            "speaker": "Old Man",
+            "text": "Hah… you're a bold one. Or simply just plain stupid."
+        },
+        {
+            "speaker": "Old Man",
+            "text": "Before you go take this SWORD with you.",
+            "animation": "Throwing"
+        },
+        {
+            "speaker": "You",
+            "text": "Thanks I'll make sure to make good use of it'"
+        },
+        {
+            "speaker": "Nice Guy",
+            "text": "If you’re really going…. good luck out there."
+        },
+        {
+            "speaker": "You",
+            "text": "I’ll bring back what we need. Don’t worry it can't be that bad..."
+        },
+        {
+            "speaker": "Eye Patch",
+            "text": "Wait shoudn't we stop him, oh and he's off...",
+            "animation": "Moving"
+        }
+    ]
+}
