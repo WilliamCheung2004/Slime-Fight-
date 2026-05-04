@@ -1,0 +1,33 @@
+{
+    "Dialogue": [
+        {
+            "speaker": "You",
+            "text": "This is it.... wait a sec no guards no welcome party?"
+        },
+        {
+            "speaker": "You",
+            "text": "This can't be the right place."
+        },
+        {
+            "speaker": "You",
+            "text": "Where even am I?"
+        },
+        {
+            "speaker": "You",
+            "text": "Wait let''s read this",
+            "animation": "Reading"
+        },
+        {
+            "speaker": "You",
+            "text": "If you are reading this the kingdom is no longer here"
+        },
+        {
+            "speaker": "You",
+            "text": "WHATTTTTTTTTTTTTTTTTTT?!?!?!?!?"
+        },
+        {
+            "speaker": "",
+            "text": "To be continued..."
+        }
+    ]
+}
