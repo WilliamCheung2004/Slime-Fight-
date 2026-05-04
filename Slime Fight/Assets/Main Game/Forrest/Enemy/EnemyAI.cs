@@ -258,6 +258,7 @@ public class EnemyAI : MonoBehaviour
         if (navAgent != null)
             navAgent.enabled = false;
 
+        spawner.EnemysKilled();
         playerUpgrade.GetMoneyEfficiency();
         float random = Random.Range(0f, 1f);
 

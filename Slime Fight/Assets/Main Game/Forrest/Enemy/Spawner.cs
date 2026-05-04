@@ -88,14 +88,14 @@ public class Spawner : MonoBehaviour
             damageMultiplier = 1.2f;
             startingMoney = 100;
         }
-        // Create waves
+
         for (int i = 0; i < totalWaves; i++)
         {
             if (i == 0 && currentScene == "Forrest")
             {
                 waves.Add(new Wave
                 {
-                    waveNumber = 1,
+                    waveNumber = i + 1,
                     spawnCount = 1,
                     spawnInterval = 5f,
                     enemyHealth = startingHealth,
@@ -103,30 +103,38 @@ public class Spawner : MonoBehaviour
                     enemyMoney = startingMoney
                 });
             }
-            else
+
+            if (currentScene == "Forrest")
             {
-                if(currentScene == "Forrest")
-                {
-                    spawnCount = 5 * i;
-                }
-                else if (currentScene == "Swamp")
-                {
-                    spawnCount = Mathf.RoundToInt(5 + i * 1.25f);
-                }
-                else if (currentScene == "Desert")
-                {
-                    spawnCount = Mathf.RoundToInt(5 + i * 1.5f);
-                }
-                waves.Add(new Wave
-                {
-                    waveNumber = spawnCount,
-                    spawnCount =  Mathf.RoundToInt(5 + i * 1.5f), 
-                    spawnInterval = Mathf.Max(0.5f, 5 - i * 0.5f),
-                    enemyHealth = Mathf.RoundToInt(waves[i - 1].enemyHealth + i * 2),
-                    enemyDamage = Mathf.RoundToInt(waves[i - 1].enemyDamage + i * 1),
-                    enemyMoney = startingMoney * (i + 1)
-                });
+                spawnCount = 5 * i;
             }
+            else if (currentScene == "Swamp")
+            {
+                spawnCount = Mathf.RoundToInt(5 + i * 1.25f);
+            }
+            else if (currentScene == "Desert")
+            {
+                spawnCount = Mathf.RoundToInt(5 + i * 1.5f);
+            }
+
+            int enemyHealth = (i == 0)
+                ? startingHealth
+                : Mathf.RoundToInt(waves[i - 1].enemyHealth + i * 2);
+
+            int enemyDamage = (i == 0)
+                ? startingDamage
+                : Mathf.RoundToInt(waves[i - 1].enemyDamage + i * 1);
+
+            waves.Add(new Wave
+            {
+                waveNumber = i + 1,          
+                spawnCount = spawnCount,     
+                spawnInterval = Mathf.Max(0.5f, 5 - i * 0.5f),
+                enemyHealth = enemyHealth,
+                enemyDamage = enemyDamage,
+                enemyMoney = startingMoney * (i + 1)
+            });
+
         }
     }
 
@@ -209,9 +217,9 @@ public class Spawner : MonoBehaviour
                 }
                 else
                 {
-                    waveText.text = ""; 
+                    waveText.text = "";
                 }
-                    waves[currentWaveIndex].spawnTimer = 0f;
+                waves[currentWaveIndex].spawnTimer = 0f;
                 waves[currentWaveIndex].spawnedEnemies = 0;
                 ShowWaveText();
             }
