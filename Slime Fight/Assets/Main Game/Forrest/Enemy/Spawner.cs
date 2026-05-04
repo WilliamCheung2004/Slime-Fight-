@@ -59,6 +59,7 @@ public class Spawner : MonoBehaviour
     public bool canShowEnemiesLeft = true;
     public bool activatePortal = true;
     public bool StartBoss = false;
+    public int spawnCount;
 
     void Start()
     {
@@ -90,7 +91,7 @@ public class Spawner : MonoBehaviour
         // Create waves
         for (int i = 0; i < totalWaves; i++)
         {
-            if (i == 0)
+            if (i == 0 && currentScene == "Forrest")
             {
                 waves.Add(new Wave
                 {
@@ -104,13 +105,25 @@ public class Spawner : MonoBehaviour
             }
             else
             {
+                if(currentScene == "Forrest")
+                {
+                    spawnCount = 5 * i;
+                }
+                else if (currentScene == "Swamp")
+                {
+                    spawnCount = Mathf.RoundToInt(5 + i * 1.25f);
+                }
+                else if (currentScene == "Desert")
+                {
+                    spawnCount = Mathf.RoundToInt(5 + i * 1.5f);
+                }
                 waves.Add(new Wave
                 {
-                    waveNumber = i + 1,
-                    spawnCount = 5 * i,
+                    waveNumber = spawnCount,
+                    spawnCount =  Mathf.RoundToInt(5 + i * 1.5f), 
                     spawnInterval = Mathf.Max(0.5f, 5 - i * 0.5f),
-                    enemyHealth = Mathf.RoundToInt(waves[i - 1].enemyHealth * healthMultiplier),
-                    enemyDamage = Mathf.RoundToInt(waves[i - 1].enemyDamage * damageMultiplier),
+                    enemyHealth = Mathf.RoundToInt(waves[i - 1].enemyHealth + i * 2),
+                    enemyDamage = Mathf.RoundToInt(waves[i - 1].enemyDamage + i * 1),
                     enemyMoney = startingMoney * (i + 1)
                 });
             }
@@ -127,7 +140,6 @@ public class Spawner : MonoBehaviour
 
         Wave wave = waves[currentWaveIndex];
 
-        Debug.Log("Enemies alive: " + wave.spawnedEnemiesList.Count);
         if (interacted)
         {
             StartWave();
@@ -160,7 +172,7 @@ public class Spawner : MonoBehaviour
         enemiesKilledThisWave++;
         int remaining = waves[currentWaveIndex].spawnCount - enemiesKilledThisWave;
 
-        if (canShowEnemiesLeft)
+        if (canShowEnemiesLeft && playerResource.GetCurrentHealth() > 0)
         {
             enemiesLeftText.text = "Enemies Left: " + Mathf.Max(0, remaining);
             enemiesLeftText.gameObject.SetActive(true);
@@ -191,8 +203,15 @@ public class Spawner : MonoBehaviour
                 enemiesKilledThisWave = 0;
                 enemiesLeftText.text = "";
                 Debug.Log($"Starting Wave {waves[currentWaveIndex].waveNumber}");
-                waveText.text = "Wave (" + waves[currentWaveIndex].waveNumber + " / " + totalWaves + ")";
-                waves[currentWaveIndex].spawnTimer = 0f;
+                if (playerResource.GetCurrentHealth() > 0)
+                {
+                    waveText.text = "Wave (" + waves[currentWaveIndex].waveNumber + " / " + totalWaves + ")";
+                }
+                else
+                {
+                    waveText.text = ""; 
+                }
+                    waves[currentWaveIndex].spawnTimer = 0f;
                 waves[currentWaveIndex].spawnedEnemies = 0;
                 ShowWaveText();
             }
@@ -280,16 +299,16 @@ public class Spawner : MonoBehaviour
     IEnumerator WaitSeconds(float seconds)
     {
         yield return new WaitForSeconds(seconds);
-        waveText.text = ""; 
+        waveText.text = "";
         if (activatePortal)
         {
             portal.SetActive(true);
         }
     }
 
-        IEnumerator turnOffRemain(float seconds)
-        {
-            yield return new WaitForSeconds(seconds);
-            enemiesLeftText.gameObject.SetActive(false);
-        }
+    IEnumerator turnOffRemain(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        enemiesLeftText.gameObject.SetActive(false);
     }
+}

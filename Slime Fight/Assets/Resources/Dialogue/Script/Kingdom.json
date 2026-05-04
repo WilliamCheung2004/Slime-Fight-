@@ -6,7 +6,7 @@
         },
         {
             "speaker": "You",
-            "text": "This can't be the right place."
+            "text": "Rather foggy for a kingdom, this can't be the right place."
         },
         {
             "speaker": "You",
@@ -14,20 +14,16 @@
         },
         {
             "speaker": "You",
-            "text": "Wait let''s read this",
-            "animation": "Reading"
+            "text": "Wait let's read that tablet there",
+            "animation": "Walk"
         },
         {
             "speaker": "You",
-            "text": "If you are reading this the kingdom is no longer here"
+            "text": "If you are reading this the kingdom was moved elsewhere"
         },
         {
             "speaker": "You",
             "text": "WHATTTTTTTTTTTTTTTTTTT?!?!?!?!?"
-        },
-        {
-            "speaker": "",
-            "text": "To be continued..."
         }
     ]
 }

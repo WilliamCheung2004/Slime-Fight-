@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 
 public enum SoundType
@@ -8,7 +9,8 @@ public enum SoundType
     BOW,
     BACKGROUND,
     ENEMY1,
-    ENEMY2
+    ENEMY2,
+    BOSS
 }
 
 [RequireComponent(typeof(AudioSource)), ExecuteInEditMode]
@@ -17,10 +19,14 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private SoundList[] soundList;
     private static SoundManager instance;
 
-    private static int globalSound = 1;
+    private static float globalEffectsSound = 1;
+    private static float globalBackgroundSound = 1;
 
     private AudioSource loopAudioSource;
 
+    [Header("Volume Settings")]
+    [SerializeField] private Slider[] effectsSliders;
+    [SerializeField] private Slider[] backgroundSliders;
 
     private static AudioSource[] sfxSources;
     private const int SFX_SOURCE_COUNT = 6;
@@ -63,7 +69,7 @@ public class SoundManager : MonoBehaviour
 
         AudioClip clip = clips[index];
 
-        PlayOnFreeSource(clip, volume);
+        PlayOnFreeSource(clip, volume * globalEffectsSound);
     }
 
 
@@ -74,7 +80,7 @@ public class SoundManager : MonoBehaviour
 
         AudioClip clip = clips[UnityEngine.Random.Range(0, clips.Length)];
 
-        PlayOnFreeSource(clip, volume);
+        PlayOnFreeSource(clip, volume * globalEffectsSound);
     }
 
 
@@ -84,7 +90,7 @@ public class SoundManager : MonoBehaviour
         if (clips == null || clips.Length == 0) return;
 
         instance.loopAudioSource.clip = clips[0];
-        instance.loopAudioSource.volume = volume * globalSound;
+        instance.loopAudioSource.volume = volume * globalBackgroundSound;
         instance.loopAudioSource.loop = true;
         instance.loopAudioSource.Play();
     }
@@ -113,7 +119,7 @@ public class SoundManager : MonoBehaviour
             freeSource = sfxSources[0];
 
         freeSource.clip = clip;
-        freeSource.volume = volume * globalSound;
+        freeSource.volume = volume * globalEffectsSound;
         freeSource.Play();
     }
 
@@ -126,6 +132,43 @@ public class SoundManager : MonoBehaviour
         for (int i = 0; i < soundList.Length; i++)
             soundList[i].name = names[i];
     }
+
+    public void ChangeEffectsVolume(Slider changedSlider)
+    {
+        globalEffectsSound = changedSlider.value;
+        PlayerPrefs.SetFloat("EffectsVolume", globalEffectsSound);
+    }
+
+    public void ChangeBackgroundVolume(Slider changedSlider)
+    {
+        globalBackgroundSound = changedSlider.value;
+        PlayerPrefs.SetFloat("BackgroundVolume", globalBackgroundSound);
+
+        if (instance.loopAudioSource.isPlaying)
+            instance.loopAudioSource.volume = globalBackgroundSound;
+    }
+
+    public void InitialiseEffectsSlider(Slider current)
+    {
+        if(PlayerPrefs.HasKey("EffectsVolume"))
+        {
+            current.value = PlayerPrefs.GetFloat("EffectsVolume");
+            globalEffectsSound = current.value;
+        }   
+    }
+
+    public void InitialiseBackgroundSlider(Slider current)
+    {
+        if (PlayerPrefs.HasKey("BackgroundVolume"))
+        {
+            current.value = PlayerPrefs.GetFloat("BackgroundVolume");
+            globalBackgroundSound = current.value;
+        }
+    }
+
+
+
+
 #endif
 }
 

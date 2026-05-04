@@ -241,4 +241,9 @@ public class AI : MonoBehaviour
         agent.updatePosition = true;
     }
 
+    private void PlayHitSound()
+    {
+        SoundManager.SelectSound(SoundType.ENEMY1, 0);
+    }
+
 }

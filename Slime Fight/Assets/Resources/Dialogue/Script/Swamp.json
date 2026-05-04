@@ -1,0 +1,29 @@
+{
+  "Dialogue": [
+    {
+        "speaker": "You",
+        "text": "Rather gloomy here."
+    },
+    {
+        "speaker": "You",
+        "text": "Best if I keep moving."
+    },
+    {
+        "speaker": "The river",
+        "text": "*CROAK*"
+    },
+    {
+        "speaker": "You",
+        "text": "What was that?"
+    },
+    {
+        "speaker": "The river",
+        "text": "*ANGRY CROAK*"
+    },
+    {
+        "speaker": "You",
+        "text": "Great what did I do?"
+    }
+  ]
+}
+

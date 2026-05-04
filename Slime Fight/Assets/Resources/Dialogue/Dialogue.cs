@@ -25,6 +25,7 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private TextMeshProUGUI textComponent;
     [SerializeField] private TextMeshProUGUI characterComponent;
     public bool textFinished = false;
+    public bool lineFinished = false;   
     public string currentSpeaker;
 
     [Header("Settings")]
@@ -40,6 +41,8 @@ public class Dialogue : MonoBehaviour
     public bool scriptDone = false;
     public string currentScene;
     public string currentAnimation;
+
+    public bool canAdvanceText = true;
 
     void Start()
     {
@@ -116,7 +119,7 @@ public class Dialogue : MonoBehaviour
             currentSpeaker = "None";
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && canAdvanceText)
         {
             if (textComponent.text == lines[index].text)
             {
@@ -127,12 +130,14 @@ public class Dialogue : MonoBehaviour
                 StopAllCoroutines();
                 textComponent.text = lines[index].text;
                 scriptDone = true;
+                lineFinished = true;
             }
         }
     }
 
     private IEnumerator TypeLine()
     {
+        lineFinished = false;
         textComponent.text = string.Empty;
         characterComponent.text = "(" + lines[index].speaker + ")";
         currentSpeaker = lines[index].speaker;
@@ -148,9 +153,10 @@ public class Dialogue : MonoBehaviour
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
         }
+        lineFinished = true;
     }
 
-    private void NextLine()
+    public void NextLine()
     {
         if (index < lines.Length - 1)
         {
