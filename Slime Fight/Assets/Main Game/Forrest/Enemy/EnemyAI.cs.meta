@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 88153b75230a9fc40a19361b8e22ad0e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - navAgent: {fileID: 2828273394203667581, guid: 5bd2dab3a1a2b574ca35f3b567e64dd0, type: 3}
+  - playerTransform: {fileID: 8999964442095524612, guid: 5bd2dab3a1a2b574ca35f3b567e64dd0, type: 3}
+  - animator: {fileID: 5304753488139868475, guid: 5bd2dab3a1a2b574ca35f3b567e64dd0, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
