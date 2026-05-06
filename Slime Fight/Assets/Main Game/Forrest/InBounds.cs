@@ -1,7 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
 public class InBounds : MonoBehaviour
 {
     [SerializeField] private BoxCollider worldBounds;
@@ -24,7 +22,7 @@ public class InBounds : MonoBehaviour
     void LateUpdate()
     {
         Bounds b = worldBounds.bounds;
-        
+
         Vector3 pos = player.position;
 
         pos.x = Mathf.Clamp(pos.x, b.min.x - buffer, b.max.x + buffer);

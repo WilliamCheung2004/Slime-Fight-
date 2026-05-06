@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using TMPro;
-
 public class DailyReward : MonoBehaviour
 {
     [SerializeField] private Button rewardButton;
@@ -35,7 +34,7 @@ public class DailyReward : MonoBehaviour
             Debug.Log("Reward claimed!");
             PlayerPrefs.SetString(Claim, DateTime.UtcNow.ToString());
             PlayerPrefs.Save();
-            if(!saveStatus)
+            if (!saveStatus)
             {
                 if (PlayerPrefs.HasKey("Gems"))
                 {
@@ -52,7 +51,7 @@ public class DailyReward : MonoBehaviour
                 save.currentData.gems += 10;
                 save.SaveToFile();
             }
-                UpdateUI();
+            UpdateUI();
         }
     }
 
