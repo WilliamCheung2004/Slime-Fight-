@@ -179,26 +179,6 @@ public class AIRanged : MonoBehaviour
         SoundManager.SelectSound(SoundType.ENEMY2, 0);
     }
 
-    private void Retreat(float distance)
-    {
-        if (!CanUseAgent()) return;
-        agent.stoppingDistance = 0f;
-
-        Vector3 dir = (transform.position - player.position).normalized;
-        Vector3 retreatPos = transform.position + dir * retreatStrength;
-
-        agent.SetDestination(retreatPos);
-
-        animator.SetBool("Walk", true);
-
-        FaceTarget();
-
-        if (distance >= attackRange + 2f)
-        {
-            isRetreating = false;
-        }
-    }
-
     private bool CanUseAgent()
     {
         return agent != null && agent.enabled && agent.isOnNavMesh;
@@ -208,6 +188,24 @@ public class AIRanged : MonoBehaviour
     {
         if (!CanUseAgent()) return;
         agent.SetDestination(player.position);
+    }
+
+    private void Retreat(float distance)
+    {
+        if (!CanUseAgent()) return;
+
+        agent.stoppingDistance = 0f;
+        agent.SetDestination(retreatDestination);
+
+        animator.SetBool("Walk", true);
+
+        FaceTarget();
+
+        if (!agent.pathPending && agent.remainingDistance <= 0.5f)
+        {
+            isRetreating = false;
+            agent.stoppingDistance = attackRange;
+        }
     }
 
     private void Attack()
