@@ -151,7 +151,6 @@ public class AIRanged : MonoBehaviour
 
         FaceTarget();
     }
-
     private bool HasLineOfSight()
     {
         if (playerCollider == null) return false;
