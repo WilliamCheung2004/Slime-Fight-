@@ -79,15 +79,18 @@ public class PlayerResource : MonoBehaviour
         }
 
         SetupSlider();
-        UpdateMoneyText();
 
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
     void Update()
     {
+        long CurrentHealthValue = currentHealth;
+        string HealthValue = FormatHealth(CurrentHealthValue);
+        long maxHealthValue = maxHealth;
+        string MaxHealthValue = FormatHealth(maxHealthValue);
         healthSlider.value = currentHealth;
-        healthText.text = currentHealth + "/" + maxHealth;
+        healthText.text = HealthValue + "/" + MaxHealthValue;
 
         UpdateMoneyText();
     }
@@ -118,9 +121,43 @@ public class PlayerResource : MonoBehaviour
 
     public void UpdateMoneyText()
     {
-        money = Mathf.Clamp(money, 0, int.MaxValue);
-        storeMoneyText.text = money.ToString();
-        gameMoneyText.text = money.ToString();
+        long currentMoney = money;
+        gameMoneyText.text = FormatMoney(currentMoney);
+        storeMoneyText.text = FormatMoney(currentMoney);
+    }
+
+    public static string FormatMoney(long value)
+    {
+        if (value >= 1000000000000)
+            return (value / 1000000000000f).ToString("0.#") + "T";
+
+        if (value >= 1000000000)
+            return (value / 1000000000f).ToString("0.#") + "B";
+
+        if (value >= 1000000)
+            return (value / 1000000f).ToString("0.#") + "M";
+
+        if (value >= 1000)
+            return (value / 1000f).ToString("0.#") + "K";
+
+        return value.ToString();
+    }
+
+    public static string FormatHealth(long value)
+    {
+        if (value >= 1000000000000)
+            return (value / 1000000000000f).ToString("0.#") + "T";
+
+        if (value >= 1000000000)
+            return (value / 1000000000f).ToString("0.#") + "B";
+
+        if (value >= 1000000)
+            return (value / 1000000f).ToString("0.#") + "M";
+
+        if (value >= 1000)
+            return (value / 1000f).ToString("0.#") + "K";
+
+        return value.ToString();
     }
 
     public int GetMoney()
