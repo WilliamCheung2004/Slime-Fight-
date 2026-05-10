@@ -207,11 +207,9 @@ public class EnemyAI : MonoBehaviour
 
         if (isPlayerVisible && !isPlayerInRange)
         {
-            UnityEngine.Debug.Log("Player detected but not in range.");
         }
         else if (isPlayerVisible && isPlayerInRange)
         {
-            UnityEngine.Debug.Log("Player detected and in range!");
         }
     }
 
@@ -258,7 +256,6 @@ public class EnemyAI : MonoBehaviour
         if (navAgent != null)
             navAgent.enabled = false;
 
-        spawner.EnemysKilled();
         playerUpgrade.GetMoneyEfficiency();
         float random = Random.Range(0f, 1f);
 

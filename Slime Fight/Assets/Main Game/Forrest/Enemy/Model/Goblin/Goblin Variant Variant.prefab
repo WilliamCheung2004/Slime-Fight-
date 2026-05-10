@@ -4109,9 +4109,6 @@ PrefabInstance:
       addedObject: {fileID: 1556833014651267674}
     - targetCorrespondingSourceObject: {fileID: 8478333725574849521, guid: 19504f82f03fb4741b69af2739fecb51, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 983068673346794925}
-    - targetCorrespondingSourceObject: {fileID: 8478333725574849521, guid: 19504f82f03fb4741b69af2739fecb51, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 4226012671882103894}
     - targetCorrespondingSourceObject: {fileID: 8478333725574849521, guid: 19504f82f03fb4741b69af2739fecb51, type: 3}
       insertIndex: -1
@@ -4130,7 +4127,7 @@ NavMeshAgent:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5984254415185832136}
   m_Enabled: 1
-  m_AgentTypeID: 0
+  m_AgentTypeID: -1923039037
   m_Radius: 0.5
   m_Speed: 1
   m_Acceleration: 2
@@ -4144,37 +4141,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &983068673346794925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5984254415185832136}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88153b75230a9fc40a19361b8e22ad0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  navAgent: {fileID: 1556833014651267674}
-  playerTransform: {fileID: 0}
-  terrainLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  playerLayerMask:
-    serializedVersion: 2
-    m_Bits: 64
-  attackCooldown: 1
-  forwardShotForce: 10
-  verticalShotForce: 5
-  vision: 20
-  range: 0.39
-  animator: {fileID: 5304753488139868475, guid: 5bd2dab3a1a2b574ca35f3b567e64dd0, type: 3}
-  correctAngle: 0
-  enemyBounds: {fileID: 0}
-  areaCenter: {x: 0, y: 0, z: 0}
-  areaSize: {x: 0, y: 0, z: 0}
-  originalPos: {x: 0, y: 0, z: 0}
 --- !u!136 &4226012671882103894
 CapsuleCollider:
   m_ObjectHideFlags: 0

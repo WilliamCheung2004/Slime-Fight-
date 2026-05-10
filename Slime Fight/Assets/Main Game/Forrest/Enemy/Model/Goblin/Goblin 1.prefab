@@ -471,6 +471,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3808478870718693426}
     - target: {fileID: 1556833014651267674, guid: 362632448c30f564ca97cb893ac0fc06, type: 3}
+      propertyPath: m_AgentTypeID
+      value: -1923039037
+      objectReference: {fileID: 0}
+    - target: {fileID: 1556833014651267674, guid: 362632448c30f564ca97cb893ac0fc06, type: 3}
       propertyPath: m_StoppingDistance
       value: 0.5
       objectReference: {fileID: 0}
@@ -504,7 +508,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: c0ec378d7285da042ab574c759b98ab3, type: 2}
     - target: {fileID: 5984254415185832136, guid: 362632448c30f564ca97cb893ac0fc06, type: 3}
       propertyPath: m_Name
-      value: Goblin Variant Variant Variant 1 1
+      value: Goblin
       objectReference: {fileID: 0}
     - target: {fileID: 6361201449330193010, guid: 362632448c30f564ca97cb893ac0fc06, type: 3}
       propertyPath: m_LocalPosition.x
@@ -554,8 +558,7 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c0ec378d7285da042ab574c759b98ab3, type: 2}
-    m_RemovedComponents:
-    - {fileID: 983068673346794925, guid: 362632448c30f564ca97cb893ac0fc06, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6361201449330193010, guid: 362632448c30f564ca97cb893ac0fc06, type: 3}

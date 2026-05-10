@@ -79754,7 +79754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSwordPrefab: {fileID: 3343524150933208364, guid: ef71026ed2f815641b0913a1ba248eb2, type: 3}
-  playerBowPrefab: {fileID: 6467831443003948632, guid: fe81daa87ee2d66459199bc87849f484, type: 3}
+  playerBowPrefab: {fileID: 6467831443003948632, guid: 1ba8e6d63d78710408f2c24ae9062cc1, type: 3}
   playerSpawnPoint: {fileID: 1627488321}
   gameManager: {fileID: 2045786290}
   save: {fileID: 554362549}

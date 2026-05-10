@@ -17,12 +17,14 @@ public class Arrow : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("Arrow collided with: " + collision.collider.name);
         if (rb == null) return;
 
         var other = collision.collider;
 
         if (other.CompareTag("Enemy"))
         {
+            Debug.Log("Arrow hit an enemy!");
             var enemyHandler = other.GetComponent<EnemyHandler>();
             if (enemyHandler != null)
             {
