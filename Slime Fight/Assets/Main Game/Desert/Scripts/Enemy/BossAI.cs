@@ -5,13 +5,11 @@ using System.Collections;
 using System;
 
 using Random = UnityEngine.Random;
-
 public enum BossMode
 {
     Melee,
     Ranged
 }
-
 public class BossAI : MonoBehaviour
 {
     [Header("References")]
@@ -354,8 +352,6 @@ public class BossAI : MonoBehaviour
         agent.CompleteOffMeshLink();
         agent.updatePosition = true;
     }
-
-
 
     private IEnumerator Dash()
     {
