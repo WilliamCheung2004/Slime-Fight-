@@ -15,6 +15,7 @@ TagManager:
   - Game Manager
   - PlayerSpawn
   - Spawner
+  - SaveManager
   layers:
   - Default
   - TransparentFX

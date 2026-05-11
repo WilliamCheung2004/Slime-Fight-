@@ -8,13 +8,14 @@ public class PlayerResource : MonoBehaviour
     [Header("Health Settings")]
     private int maxHealth;
     [SerializeField] private int currentHealth;
-    private int defaultBowHealth = 70;
-    private int defaultSwordHealth = 100;
-    private int defaultBowDamage = 2;
-    private int defaultSwordDamage = 1;
+    public int defaultBowHealth = 70;
+    public int defaultSwordHealth = 100;
+    public int defaultBowDamage = 2;
+    public int defaultSwordDamage = 1;
 
     [Header("Damage Settings")]
     private int damage = 1;
+    private int bowDamage;
 
     [Header("Money Settings")]
     [SerializeField] TMP_Text storeMoneyText;
@@ -49,6 +50,11 @@ public class PlayerResource : MonoBehaviour
             currentHealth = save.currentData.playerCurrentHealth;
         }
 
+        if (save.currentData.playerDamage > 0)
+        {
+            damage = save.currentData.playerDamage;
+            bowDamage = Mathf.RoundToInt(damage * 1.10f);
+        }
         else
         {
             if (save.currentData.playerType == "Sword")
@@ -85,6 +91,7 @@ public class PlayerResource : MonoBehaviour
 
     void Update()
     {
+        Debug.Log("Current Damage: " + damage);
         long CurrentHealthValue = currentHealth;
         string HealthValue = FormatHealth(CurrentHealthValue);
         long maxHealthValue = maxHealth;
@@ -178,6 +185,12 @@ public class PlayerResource : MonoBehaviour
     public void SetDamage(int newDamage)
     {
         damage = newDamage;
+        bowDamage = Mathf.RoundToInt(newDamage * 1.10f);
+    }
+
+    public int GetBowDamage()
+    {
+        return bowDamage;
     }
 
     public int TakeDamage(int damageAmount)

@@ -47,7 +47,7 @@ public class Spawn : MonoBehaviour
             ? save.currentData.playerPosition
             : playerSpawnPoint.transform.position;
 
-        player = Instantiate(prefabToSpawn, spawnPos, Quaternion.identity);
+        player = Instantiate(prefabToSpawn, spawnPos, playerSpawnPoint.transform.rotation);
         player.transform.SetParent(playerSpawnPoint.transform, true);
 
         save.currentData.playerPosition = spawnPos;

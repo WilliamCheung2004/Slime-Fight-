@@ -103,9 +103,9 @@ public class UpgradeManager : MonoBehaviour
                     break;
 
                 case "Damage":
-                    if (saved.currentValue > 0)
+                    if (saveManager.currentData.playerDamage > 0)
                     {
-                        playerResource.SetDamage(playerResource.GetDamage() + (int)saved.currentValue);
+                        playerResource.SetDamage(saveManager.currentData.playerDamage);
                         upgrades[2].toolTip.line2 = "Current damage: " + playerResource.GetDamage() + " DMG";
                     }
                     break;

@@ -72,7 +72,6 @@ public class EnemyAI : MonoBehaviour
         navAgent.updateRotation = false;
         navAgent.updateUpAxis = false;
 
-        // Find the Spawner in the scene and get the player
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
         enemyBounds = GameObject.FindGameObjectsWithTag("EnemyLimit")[0].GetComponent<BoxCollider>();
         spawner = GameObject.Find("Spawner")?.GetComponent<Spawner>();
@@ -294,6 +293,7 @@ public class EnemyAI : MonoBehaviour
         if (enemyHandler.GetCurrentHealth() <= 0)
         {
             dead = true;
+            spawner.EnemysKilled();
             Death();
         }
     }

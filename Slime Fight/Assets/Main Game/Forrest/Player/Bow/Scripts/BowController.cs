@@ -131,16 +131,19 @@ public class BowController : MonoBehaviour
 
     public void LowHit()
     {
+        if (currentArrow == null) return;
         currentArrow.GetComponent<Arrow>().LowHit();
     }
 
     public void MediumHit()
     {
+        if (currentArrow == null) return;
         currentArrow.GetComponent<Arrow>().MediumHit();
     }
 
     public void HighHit()
     {
+        if (currentArrow == null) return;
         currentArrow.GetComponent<Arrow>().HighHit();
     }
 }

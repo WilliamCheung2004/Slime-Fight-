@@ -84,7 +84,7 @@ public class BossAI : MonoBehaviour
         playerResource = GameObject.FindGameObjectWithTag("Player Resources")?.GetComponent<PlayerResource>();
         if (!playerResource)
         {
-            Debug.Log("PRESOURCE NOT FOUND");
+            Debug.Log("P RESOURCE NOT FOUND");
         }
 
         while (spawner == null)
