@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 public class BowController : MonoBehaviour
 {
     [Header("Animator References")]
@@ -21,15 +22,24 @@ public class BowController : MonoBehaviour
     private bool canCreateArrow = true;
     private bool canShootArrow = false;
 
+    [SerializeField] private SaveManager save;
 
-    private void Start()
+    IEnumerator Start()
     {
-        Debug.Log("BowController Start");
-        playerResource = player.GetComponent<PlayerResource>();
+        while (playerResource == null)
+        {
+            GameObject playerResourceInstance = GameObject.FindGameObjectWithTag("Player Resources");
+            if (playerResourceInstance != null)
+            {
+                playerResource = playerResourceInstance.GetComponent<PlayerResource>();
+            }
+            yield return null;
+        }
     }
 
     void Update()
     {
+
         if (bow.speed > 0 && originalSpeed != bow.speed)
         {
             originalSpeed = bow.speed;
@@ -92,7 +102,7 @@ public class BowController : MonoBehaviour
 
         currentArrow = Instantiate(arrowPrefab, arrowSpawnPoint.position, spawnRotation);
         currentArrow.transform.SetParent(arrowSpawnPoint, true);
-
+        Debug.Log("CURRENT ARROW WITH DAMAGE:" + currentArrow.GetComponent<Arrow>().damage);
         currentArrowRb = currentArrow.GetComponent<Rigidbody>();
         if (currentArrowRb == null)
             currentArrowRb = currentArrow.AddComponent<Rigidbody>();
@@ -117,5 +127,20 @@ public class BowController : MonoBehaviour
         currentArrowRb.velocity = arrowSpawnPoint.forward * arrowSpeed + Vector3.up * 1f;
         currentArrow = null;
         currentArrowRb = null;
+    }
+
+    public void LowHit()
+    {
+        currentArrow.GetComponent<Arrow>().LowHit();
+    }
+
+    public void MediumHit()
+    {
+        currentArrow.GetComponent<Arrow>().MediumHit();
+    }
+
+    public void HighHit()
+    {
+        currentArrow.GetComponent<Arrow>().HighHit();
     }
 }
