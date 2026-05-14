@@ -416,7 +416,7 @@ public class BossAI : MonoBehaviour
         {
             rb.velocity = direction * projectileSpeed;
         }
-
+        SoundManager.SelectSound(SoundType.BOSS, 2);
         Destroy(projectile, 5f);
     }
 

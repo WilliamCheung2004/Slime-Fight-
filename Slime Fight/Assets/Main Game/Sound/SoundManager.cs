@@ -132,6 +132,7 @@ public class SoundManager : MonoBehaviour
         for (int i = 0; i < soundList.Length; i++)
             soundList[i].name = names[i];
     }
+#endif
 
     public void ChangeEffectsVolume(Slider changedSlider)
     {
@@ -165,11 +166,6 @@ public class SoundManager : MonoBehaviour
             globalBackgroundSound = current.value;
         }
     }
-
-
-
-
-#endif
 }
 
 [Serializable]

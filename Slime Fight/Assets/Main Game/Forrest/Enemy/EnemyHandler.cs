@@ -4,8 +4,8 @@ public class EnemyHandler : MonoBehaviour
 {
 
     [Header("Enemy Settings")]
-    private int maxHealth;
-    private int currentHealth;
+    private int maxHealth = 1;
+    private int currentHealth = 1;
     private int damage;
 
     [Header("Enemy Health UI")]

@@ -26,6 +26,10 @@ public class Fireball : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             playerResource.SetCurrentHealth(playerResource.GetCurrentHealth() - enemy.GetDamage());
+            Destroy(gameObject);
+        }
+        if (other.gameObject.CompareTag("Terrain")){
+            Destroy(gameObject);
         }
     }
 }

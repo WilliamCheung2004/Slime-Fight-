@@ -280,7 +280,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97bddd2352098bb44baafbb016623e10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 3732769856975825686, guid: 9a72b80b9ad71e745a95822a75980c6c, type: 3}
 --- !u!54 &-9187784673775110529
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -307,7 +306,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!136 &1014462960879622969
 CapsuleCollider:
   m_ObjectHideFlags: 0

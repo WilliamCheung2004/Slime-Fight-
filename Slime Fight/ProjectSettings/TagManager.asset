@@ -16,6 +16,8 @@ TagManager:
   - PlayerSpawn
   - Spawner
   - SaveManager
+  - Bounds
+  - Terrain
   layers:
   - Default
   - TransparentFX
