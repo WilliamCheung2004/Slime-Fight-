@@ -1433,7 +1433,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -8302,7 +8302,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -12682,6 +12682,7 @@ MonoBehaviour:
   healthSlider: {fileID: 1022872125}
   healthText: {fileID: 1353223117}
   save: {fileID: 554362549}
+  initialisedData: 0
 --- !u!224 &736692307
 RectTransform:
   m_ObjectHideFlags: 0
@@ -72213,7 +72214,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -83787,6 +83788,7 @@ MonoBehaviour:
   canShowEnemiesLeft: 1
   activatePortal: 1
   StartBoss: 0
+  skipFight: 0
   spawnCount: 0
 --- !u!4 &1739060642
 Transform:
@@ -86975,7 +86977,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -90838,6 +90840,7 @@ MonoBehaviour:
   playerHealthUI: {fileID: 1022872122}
   playerMoneyUI: {fileID: 640670404}
   stateManage: {fileID: 2045786293}
+  playerResource: {fileID: 736692306}
 --- !u!114 &2045786296
 MonoBehaviour:
   m_ObjectHideFlags: 0

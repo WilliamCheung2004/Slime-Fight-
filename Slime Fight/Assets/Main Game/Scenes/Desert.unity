@@ -566,7 +566,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -9188,7 +9188,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -9868,98 +9868,6 @@ MonoBehaviour:
           m_StringArgument: Health
           m_BoolArgument: 0
         m_CallState: 2
---- !u!1 &1158492126
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1158492129}
-  - component: {fileID: 1158492128}
-  - component: {fileID: 1158492127}
-  m_Layer: 0
-  m_Name: Camera
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!81 &1158492127
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1158492126}
-  m_Enabled: 1
---- !u!20 &1158492128
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1158492126}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_Iso: 200
-  m_ShutterSpeed: 0.005
-  m_Aperture: 16
-  m_FocusDistance: 10
-  m_FocalLength: 50
-  m_BladeCount: 5
-  m_Curvature: {x: 2, y: 11}
-  m_BarrelClipping: 0.25
-  m_Anamorphism: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!4 &1158492129
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1158492126}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 983.2601, y: 612.3565, z: -622.3733}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1164137866
 GameObject:
   m_ObjectHideFlags: 0
@@ -13994,7 +13902,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -15869,7 +15777,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -20658,6 +20566,7 @@ MonoBehaviour:
   canShowEnemiesLeft: 1
   activatePortal: 0
   StartBoss: 0
+  skipFight: 0
   spawnCount: 0
 --- !u!222 &1635666581086292540
 CanvasRenderer:
@@ -22963,7 +22872,7 @@ GameObject:
   - component: {fileID: 3268777473883259993}
   m_Layer: 0
   m_Name: Terrain
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -23373,11 +23282,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 2266653478760254341}
-  playerPos: {fileID: 1748192956220940625}
+  playerPos: {fileID: 0}
   save: {fileID: 8682831163888540538}
   playerHealthUI: {fileID: 1946603976327713797}
   playerMoneyUI: {fileID: 8669808471126589839}
   stateManage: {fileID: 2131700286029691331}
+  playerResource: {fileID: 4356619195570600178}
 --- !u!1 &2946127912866730351
 GameObject:
   m_ObjectHideFlags: 0
@@ -29907,6 +29817,7 @@ MonoBehaviour:
   healthSlider: {fileID: 6824168746468344961}
   healthText: {fileID: 3370350177981332956}
   save: {fileID: 8682831163888540538}
+  initialisedData: 0
 --- !u!114 &4371544548480519288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33064,6 +32975,7 @@ GameObject:
   - component: {fileID: 2131700286029691331}
   - component: {fileID: 7632167208322128505}
   - component: {fileID: 2890629517417150276}
+  - component: {fileID: 7645429173865013644}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Game Manager
@@ -33071,6 +32983,75 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7645429173865013644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7645429173865013643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37fcfdfcbd9b7674aadc266c8ee45bee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentGemsText: {fileID: 335098135}
+  skins:
+  - skinName: Smile
+    cost: 5
+    skinCostText: {fileID: 734006384}
+    button: {fileID: 440626322}
+    owned: 0
+    equipped: 0
+  - skinName: Unsure
+    cost: 10
+    skinCostText: {fileID: 83358443}
+    button: {fileID: 384171606}
+    owned: 0
+    equipped: 0
+  - skinName: Moustache
+    cost: 15
+    skinCostText: {fileID: 1890820489}
+    button: {fileID: 1621639379}
+    owned: 0
+    equipped: 0
+  - skinName: Magma
+    cost: 20
+    skinCostText: {fileID: 1805858750}
+    button: {fileID: 1164137868}
+    owned: 0
+    equipped: 0
+  - skinName: Purple
+    cost: 30
+    skinCostText: {fileID: 1234457884}
+    button: {fileID: 169711204}
+    owned: 0
+    equipped: 0
+  - skinName: Pink
+    cost: 50
+    skinCostText: {fileID: 1110320044}
+    button: {fileID: 1672971887}
+    owned: 0
+    equipped: 0
+  - skinName: Lime
+    cost: 100
+    skinCostText: {fileID: 408926966}
+    button: {fileID: 915470716}
+    owned: 0
+    equipped: 0
+  - skinName: Yellow
+    cost: 200
+    skinCostText: {fileID: 879972351}
+    button: {fileID: 454042617}
+    owned: 0
+    equipped: 0
+  - skinName: Cloud
+    cost: 500
+    skinCostText: {fileID: 428695345}
+    button: {fileID: 595506072}
+    owned: 0
+    equipped: 0
+  save: {fileID: 8682831163888540538}
 --- !u!114 &7691802261394710261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35456,4 +35437,3 @@ SceneRoots:
   - {fileID: 820292937036706582}
   - {fileID: 5126908740956008837}
   - {fileID: 7261219511957457200}
-  - {fileID: 1158492129}

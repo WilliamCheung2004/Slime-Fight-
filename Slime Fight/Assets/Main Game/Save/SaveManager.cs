@@ -11,6 +11,7 @@ public class SaveManager : MonoBehaviour
 
     private void Awake()
     {
+        Debug.Log("Save at: " + Application.persistentDataPath);
         saveFilePath = Path.Combine(Application.persistentDataPath, "saveData.json");
     }
 

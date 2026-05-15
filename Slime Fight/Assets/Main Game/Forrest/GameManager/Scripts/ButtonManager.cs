@@ -1,5 +1,6 @@
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using System.Collections;
 
 public class ButtonManager : MonoBehaviour
 {
@@ -11,16 +12,28 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] private GameObject playerHealthUI;
     [SerializeField] private GameObject playerMoneyUI;
     [SerializeField] private StateManage stateManage;
+    [SerializeField] private PlayerResource playerResource;
+    private GameObject player;
+    private Transform playerTransform;
+
+    private IEnumerator Start()
+    {
+        save.CheckSave();
+        while (player == null)
+        {
+            GameObject p = GameObject.FindGameObjectWithTag("Player");
+            if (p != null)
+                playerTransform = p.transform;
+
+            yield return null;
+        }
+    }
 
     private void OnEnable()
     {
         Time.timeScale = 1f;
     }
 
-    private void Start()
-    {
-        save.CheckSave();
-    }
     public void Continue()
     {
         stateManage.paused = false;
@@ -39,8 +52,13 @@ public class ButtonManager : MonoBehaviour
 
     public void Home()
     {
-        if (save.currentData.playerCurrentHealth != 0)
+        if (playerResource.GetCurrentHealth() != 0)
         {
+            save.currentData.playerCurrentHealth = playerResource.GetCurrentHealth();
+            save.currentData.playerMaxHealth = playerResource.GetMaxHealth();
+            save.currentData.playerDamage = playerResource.GetDamage();
+            save.currentData.playerMoney = playerResource.GetMoney();
+            save.currentData.playerPosition = playerTransform.position;
             save.SaveToFile();
         }
         else

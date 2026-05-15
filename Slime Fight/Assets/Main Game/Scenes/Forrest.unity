@@ -2719,7 +2719,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -4476,7 +4476,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -5038,7 +5038,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -50713,7 +50713,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &950313874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52823,6 +52823,7 @@ MonoBehaviour:
   healthSlider: {fileID: 733121245}
   healthText: {fileID: 1087592780}
   save: {fileID: 102180657}
+  initialisedData: 0
 --- !u!1001 &1124897012
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54294,6 +54295,7 @@ GameObject:
   - component: {fileID: 1292719918}
   - component: {fileID: 1292719920}
   - component: {fileID: 1292719921}
+  - component: {fileID: 1292719922}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Game Manager
@@ -54416,6 +54418,76 @@ MonoBehaviour:
   playerHealthUI: {fileID: 733121243}
   playerMoneyUI: {fileID: 604060485}
   stateManage: {fileID: 1292719918}
+  playerResource: {fileID: 1120524940}
+--- !u!114 &1292719922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292719916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37fcfdfcbd9b7674aadc266c8ee45bee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentGemsText: {fileID: 859681576}
+  skins:
+  - skinName: Smile
+    cost: 5
+    skinCostText: {fileID: 1317369615}
+    button: {fileID: 177376854}
+    owned: 0
+    equipped: 0
+  - skinName: Unsure
+    cost: 10
+    skinCostText: {fileID: 73434208}
+    button: {fileID: 1821711870}
+    owned: 0
+    equipped: 0
+  - skinName: Moustache
+    cost: 15
+    skinCostText: {fileID: 1923181603}
+    button: {fileID: 171064495}
+    owned: 0
+    equipped: 0
+  - skinName: Magma
+    cost: 20
+    skinCostText: {fileID: 1900403772}
+    button: {fileID: 298930480}
+    owned: 0
+    equipped: 0
+  - skinName: Purple
+    cost: 30
+    skinCostText: {fileID: 791306810}
+    button: {fileID: 298930480}
+    owned: 0
+    equipped: 0
+  - skinName: Pink
+    cost: 50
+    skinCostText: {fileID: 1871135482}
+    button: {fileID: 669082962}
+    owned: 0
+    equipped: 0
+  - skinName: Lime
+    cost: 100
+    skinCostText: {fileID: 1301315283}
+    button: {fileID: 1638789482}
+    owned: 0
+    equipped: 0
+  - skinName: Yellow
+    cost: 200
+    skinCostText: {fileID: 1646877737}
+    button: {fileID: 988244840}
+    owned: 0
+    equipped: 0
+  - skinName: Cloud
+    cost: 500
+    skinCostText: {fileID: 1745899209}
+    button: {fileID: 375905856}
+    owned: 0
+    equipped: 0
+  save: {fileID: 102180657}
 --- !u!1 &1301315281
 GameObject:
   m_ObjectHideFlags: 0
@@ -56299,6 +56371,7 @@ MonoBehaviour:
   canShowEnemiesLeft: 1
   activatePortal: 1
   StartBoss: 0
+  skipFight: 0
   spawnCount: 0
 --- !u!114 &1498787529
 MonoBehaviour:
@@ -62253,7 +62326,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -62647,7 +62720,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1763185124
 MonoBehaviour:
   m_ObjectHideFlags: 0

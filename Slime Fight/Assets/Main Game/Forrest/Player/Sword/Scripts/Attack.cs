@@ -28,7 +28,7 @@ public class ClickAttack : MonoBehaviour
 
     public void playSound()
     {
-        SoundManager.PlaySound(SoundType.SWORD);
+        SoundManager.PlaySound(SoundType.SWORD, 0.5f);
     }
 
     void StartAttack()

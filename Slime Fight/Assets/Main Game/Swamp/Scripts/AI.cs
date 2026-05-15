@@ -226,7 +226,7 @@ public class AI : MonoBehaviour
 
         while (t < 1f)
         {
-            t += Time.deltaTime / duration;
+            t += Time.deltaTime;
 
             float height = 2f; 
             Vector3 pos = Vector3.Lerp(startPos, endPos, t);

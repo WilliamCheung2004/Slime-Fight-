@@ -59,6 +59,7 @@ public class Spawner : MonoBehaviour
     public bool canShowEnemiesLeft = true;
     public bool activatePortal = true;
     public bool StartBoss = false;
+    public bool skipFight = false;
     public int spawnCount;
 
     void Start()
@@ -158,7 +159,25 @@ public class Spawner : MonoBehaviour
         {
             HandleWave(waves[currentWaveIndex]);
         }
-
+        if (skipFight)
+        {
+            foreach (var enemy in wave.spawnedEnemiesList)
+            {
+                if (enemy != null)
+                {
+                    Destroy(enemy);
+                }
+            }
+            currentWaveIndex = waves.Count;
+            waveActive = false;
+            enemiesLeftText.text = "";
+            waveText.text = "Waves Completed!";
+            StartCoroutine(WaitSeconds(3f));
+            if (currentScene == "Desert")
+            {
+                StartBoss = true;
+            }
+        }
     }
 
     private void StartWave()

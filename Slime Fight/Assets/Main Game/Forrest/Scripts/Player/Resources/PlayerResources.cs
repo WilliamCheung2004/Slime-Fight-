@@ -31,6 +31,7 @@ public class PlayerResource : MonoBehaviour
 
     private GameObject player;
     string characterType;
+    public bool initialisedData = false;
 
     private void Awake()
     {
@@ -85,6 +86,7 @@ public class PlayerResource : MonoBehaviour
         }
 
         SetupSlider();
+        initialisedData = true;
 
         player = GameObject.FindGameObjectWithTag("Player");
     }
